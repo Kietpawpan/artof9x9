@@ -1,5 +1,5 @@
-@import url('../css/reset.css');
-@import url('../css/typography.css');
+@import url('reset.css');
+@import url('typography.css');
 
 body {
 	background: #e5dcb5;
