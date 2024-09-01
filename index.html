@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+ <link rel="stylesheet" href="artof9x9.css">
+</head>
+<style>
+
+
+
+table, th, td {
+  border:none;
+  vertical-align:top;
+  text-align: left;
+  color:black;
+  font-size:18px;
+  font-family:'Sofia';
+  resize: both;
+  padding-left:15px;
+}
+
+.lineA{
+height:50px;
+}
+
+.text{
+  background-color:white;
+  /*background-image: url(wood1.jpg);*/
+  background-size:contain; 
+  font-family: "Inconsolata", "Handjet";
+  padding-top:15px;
+  width:500px;
+  line-height:1.5;
+  font-size:22px;
+
+}
+
+.paper{
+margin: 500px opx opx 50px;
+}
+
+
+.title{
+  font-family:"Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  text-align:left;
+  font-size:14px;
+  margin-left:25px;
+}
+
+.bt{
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  text-align:center;
+  padding:1px;
+  font-size:15px;
+  color:white;
+  font-weight:bold;
+  font-family: Arial;
+}
+
+.wt{
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align:center;
+  padding:1px;
+  font-size:15px;
+  border: 1px solid black;
+  color:black;
+ font-weight:bold;
+  font-family: Arial;
+
+}
+
+
+</style>
+<body>
+
+<table style='zoom:50%;'>
+<tr>
+<td><div class="grid-container" id='board1'></div></td>
+<td class='text' id='c1'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board2'></div></td>
+<td class='text' id='c2'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board3'></div></td>
+<td class='text' id='c3'></td>
+</tr>
+
+</table>
+<hr/>
+&copy; 2024 Monteo da Westi
+
+<script src="artof9x9.js">
+</script>
+
+<script>
+
+var m1 = b;
+var c1='B1 is the best opening.';
+var m2 = b1ee+b;
+var m3 = b;
+document.getElementById('board1').innerHTML= m1;
+document.getElementById('board2').innerHTML= m2;
+document.getElementById('board3').innerHTML= m3;
+
+document.getElementById('c1').innerHTML= c(c1);
+
+function c(a){
+return a.replace('B1','<span class="bt">1</span>');
+
+}
+
+</script>
+
+
+
+</body>
+</html>
