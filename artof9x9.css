@@ -127,10 +127,10 @@ textarea:focus, input:focus{
   margin: 50px 0px 0px 50px;
   background-color: #111; /* color of the line between cells */
   display: grid;
-  grid-gap: 1px; /* size of the line between cells */
+  grid-gap: 4px; /* size of the line between cells */
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*9 x 9 board size */
   grid-template-rows: minmax(min-content, max-content);
-  padding:3px; /* size of the line around the board */
+  padding:7px; /* size of the line around the board */
   width:450px; /*board width */
   height:450px; /*board height */
   position:relative;
@@ -144,7 +144,8 @@ p {
 }
 
 .grid-item {
-  background-color: white; 
+  background-color: #eec134;
+ min-height: 50px;
 /*
   min-height: 50px; /* space between lines 
  background-image:url('wood1.jpg'); /*url('wood1.jpg') ; from https://www.stockvault.net/photo/124529/wood-background 
@@ -157,7 +158,7 @@ p {
     height: 35px;
     padding: 9px;
     background: #fff;
-    border: 1px solid #666;
+    border: 2px solid #666;
     color: #666;
     text-align: center;
     font: 30px Arial, sans-serif;
