@@ -187,25 +187,25 @@ var m0 ="";
 var m1 = b;
 var m2 = b1ee+b;
 var m3 = b1ee+w2eg+b;
-var m4 = "";
-var m5 = "";
-var m6 = "";
-var m7 = "";
-var m8 = "";
-var m9 = "";
-var m10 = "";
-var m11 = "";
-var m12 = "";
-var m13 = "";
-var m14 = "";
-var m15 = "";
-var m16 = "";
-var m17 = "";
-var m18 = "";
-var m19 = "";
-var m20 = "";
+var m4 = b;
+var m5 = b;
+var m6 = b;
+var m7 = b;
+var m8 = b;
+var m9 = b;
+var m10 = b;
+var m11 = b;
+var m12 = b;
+var m13 = b;
+var m14 = b;
+var m15 = b;
+var m16 = b;
+var m17 = b;
+var m18 = b;
+var m19 = b;
+var m20 = b;
 
-let move =[m0, m1, m2, m3];
+let move =[m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12];
 
 for(let m=1;m<move.length;m++){
 document.getElementById('board'+m).innerHTML= move[m];
@@ -219,9 +219,19 @@ document.getElementById('c'+c).innerHTML= comment[c];
 
 function c(a){
 var b1 = a.replace('B1','<span class="bt">1</span>');
-var w2 = b1.replace('W2','<span class="wt">2</span>');
-var b3 = w2.replace('B3','<span class="bt">3</span>');
-var w4 = b3.replace('W4','<span class="wt">4</span>');
+var b3 = b1.replace('B3','<span class="bt">3</span>');
+var b5 = b3.replace('B5','<span class="bt">5</span>');
+var b7 = b5.replace('B7','<span class="bt">7</span>');
+var b9 = b7.replace('B9','<span class="bt">9</span>');
+var b11 = b9.replace('B11','<span class="bt">11</span>');
+var b13 = b11.replace('B13','<span class="bt">13</span>');
+var b15 = b13.replace('B15','<span class="bt">15</span>');
+var b17 = b15.replace('B17','<span class="bt">17</span>');
+var b19 = b17.replace('B19','<span class="bt">19</span>');
+
+var w2 = b19.replace('W2','<span class="wt">2</span>');
+var w4 = w2.replace('W4','<span class="wt">4</span>');
+
 return w4;
 }
 
