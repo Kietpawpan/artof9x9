@@ -30,11 +30,11 @@ height:50px;
   /*background-image: url(wood1.jpg);*/
   background-size:contain; 
   font-family: "Inconsolata", "Handjet";
-  padding-top:15px;
+  padding-top:30px;
   width:500px;
   line-height:1.5;
   font-size:22px;
-
+  zoom:170%;
 }
 
 .paper{
@@ -86,7 +86,8 @@ margin: 500px opx opx 50px;
 </style>
 <body>
 
-<table>
+<table style="zoom:50%;">
+
 <tr>
 <td><div class="grid-container" id='board1'></div></td>
 <td class='text' id='c1'></td>
@@ -102,6 +103,52 @@ margin: 500px opx opx 50px;
 <td class='text' id='c3'></td>
 </tr>
 
+<tr>
+<td><div class="grid-container" id='board4'></div></td>
+<td class='text' id='c4'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board5'></div></td>
+<td class='text' id='c5'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board6'></div></td>
+<td class='text' id='c6'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board7'></div></td>
+<td class='text' id='c7'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board8'></div></td>
+<td class='text' id='c8'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board9'></div></td>
+<td class='text' id='c9'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board10'></div></td>
+<td class='text' id='c10'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board11'></div></td>
+<td class='text' id='c11'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board12'></div></td>
+<td class='text' id='c12'></td>
+</tr>
+
+
 </table>
 <hr/>
 &copy; 2024 Monteo da Westi
@@ -110,20 +157,72 @@ margin: 500px opx opx 50px;
 </script>
 
 <script>
+// Comment for each move.
+var c0="";
+var c1=c('B1 is the best opening.');
+var c2=c('W2 should be a balancing move.');
+var c3=c('B3 should be flexible.');
+var c4=c('W4 should also be a balancing move.');
+var c5=c('');
+var c6=c('');
+var c7=c('');
+var c8=c('');
+var c9=c('');
+var c10=c('');
+var c11=c('B1 is the best opening.');
+var c12=c('W2 should be a balancing move.');
+var c13=c('B3 should be flexible.');
+var c14=c('W4 should also be a balancing move.');
+var c15=c('');
+var c16=c('');
+var c17=c('');
+var c18=c('');
+var c19=c('');
+var c20=c('');
 
+let comment = [c0,c1,c2,c3];
+
+// Move figures.
+var m0 ="";
 var m1 = b;
-var c1='B1 is the best opening.';
 var m2 = b1ee+b;
-var m3 = b;
-document.getElementById('board1').innerHTML= m1;
-document.getElementById('board2').innerHTML= m2;
-document.getElementById('board3').innerHTML= m3;
+var m3 = b1ee+w2eg+b;
+var m4 = "";
+var m5 = "";
+var m6 = "";
+var m7 = "";
+var m8 = "";
+var m9 = "";
+var m10 = "";
+var m11 = "";
+var m12 = "";
+var m13 = "";
+var m14 = "";
+var m15 = "";
+var m16 = "";
+var m17 = "";
+var m18 = "";
+var m19 = "";
+var m20 = "";
 
-document.getElementById('c1').innerHTML= c(c1);
+let move =[m0, m1, m2, m3];
+
+for(let m=1;m<move.length;m++){
+document.getElementById('board'+m).innerHTML= move[m];
+}
+
+for(let c=1;c<comment.length;c++){
+document.getElementById('c'+c).innerHTML= comment[c];
+}
+
+
 
 function c(a){
-return a.replace('B1','<span class="bt">1</span>');
-
+var b1 = a.replace('B1','<span class="bt">1</span>');
+var w2 = b1.replace('W2','<span class="wt">2</span>');
+var b3 = w2.replace('B3','<span class="bt">3</span>');
+var w4 = b3.replace('W4','<span class="wt">4</span>');
+return w4;
 }
 
 </script>
