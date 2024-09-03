@@ -90,67 +90,71 @@ margin: 500px opx opx 50px;
 <body>
 
 <table style="zoom:50%;">
+<tr>
+<td><div class="grid-container" id='board0' style="visibility:hidden"></div></td>
+<td class='text' id='c0'></td>
+</tr>
+
 
 <tr>
-<td><div class="grid-container" id='board1'></div></td>
+<td><div class="grid-container" id='board1' style="visibility:hidden"></div></td>
 <td class='text' id='c1'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board2'></div></td>
+<td><div class="grid-container" id='board2'style="visibility:hidden"></div></td>
 <td class='text' id='c2'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board3'></div></td>
+<td><div class="grid-container" id='board3' style="visibility:hidden"></div></td>
 <td class='text' id='c3'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board4'></div></td>
+<td><div class="grid-container" id='board4' style="visibility:hidden"></div></td>
 <td class='text' id='c4'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board5'></div></td>
+<td><div class="grid-container" id='board5' style="visibility:hidden"></div></td>
 <td class='text' id='c5'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board6'></div></td>
+<td><div class="grid-container" id='board6' style="visibility:hidden"></div></td>
 <td class='text' id='c6'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board7'></div></td>
+<td><div class="grid-container" id='board7' style="visibility:hidden"></div></td>
 <td class='text' id='c7'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board8'></div></td>
+<td><div class="grid-container" id='board8' style="visibility:hidden"></div></td>
 <td class='text' id='c8'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board9'></div></td>
+<td><div class="grid-container" id='board9' style="visibility:hidden"></div></td>
 <td class='text' id='c9'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board10'></div></td>
+<td><div class="grid-container" id='board10' style="visibility:hidden"></div></td>
 <td class='text' id='c10'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board11'></div></td>
+<td><div class="grid-container" id='board11' style="visibility:hidden"></div></td>
 <td class='text' id='c11'></td>
 </tr>
 
 <tr>
-<td><div class="grid-container" id='board12'></div></td>
+<td><div class="grid-container" id='board12' style="visibility:hidden"></div></td>
 <td class='text' id='c12'></td>
 </tr>
-
 
 </table>
 <hr/>
@@ -160,9 +164,10 @@ margin: 500px opx opx 50px;
 </script>
 
 <script>
+
 // Comment for each move.
-var c0="";
-var c1=c('BS Go Seigen<br>WS Miyamoto Naoki<div class="players">Place: Japan<br>Date: 1986</div>');
+var c0= c('BS Go Seigen<br>WS Miyamoto Naoki<div class="players">Place: Japan<br>Date: 1986</div>');
+var c1=c('B1 is the best opening in 9 &times 9 Go.</div>');
 var c2=c('W2 should be a balancing move.');
 var c3=c('B81 should be flexible.');
 var c4=c('B75 should also be a balancing move.');
@@ -183,13 +188,13 @@ var c18=c('');
 var c19=c('');
 var c20=c('');
 
-let comment = [c0,c1,c2,c3];
+let comment = [c0,c1,c2];
 
 // Moves and marks on the board.
-var m0 ="";
-var m1 = b;
-var m2 = b1ee+b;
-var m3 = b1ee+w2eg+b;
+var m0 = b;
+var m1 = b1ee+b;
+var m2 = b1ee+w2dc+b;
+var m3 = b;
 var m4 = b;
 var m5 = b;
 var m6 = b;
@@ -208,13 +213,14 @@ var m18 = b;
 var m19 = b;
 var m20 = b;
 
-let move =[m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12];
+let move =[m0, m1, m2];
 
-for(let m=1;m<move.length;m++){
+for(let m=0;m<move.length;m++){
 document.getElementById('board'+m).innerHTML= move[m];
+document.getElementById('board'+m).style.visibility='visible';
 }
 
-for(let c=1;c<comment.length;c++){
+for(let c=0;c<comment.length;c++){
 document.getElementById('c'+c).innerHTML= comment[c];
 }
 
