@@ -144,7 +144,7 @@ p {
 }
 
 .grid-item {
-  background-color: #eec134;
+  background-color: #ECAD4E; /*#FFD966; #f7dc6f; #eec134;*/
  min-height: 50px;
 /*
   min-height: 50px; /* space between lines 
