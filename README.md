@@ -1,5 +1,5 @@
 # artof9x9.js
-A JavaScript library for creating 9 $imes; 9 Go diagrams and comments.
+A JavaScript library for creating 9 &times; 9 Go diagrams and comments.
 
 ## How to Use
 1. f
