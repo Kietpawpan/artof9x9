@@ -1,23 +1,96 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8">
     <title>The Art of 9 &times 9 Go</title>
- <link rel="stylesheet" href="artof9x9.css">
+     <link rel="stylesheet" href="artof9x9.css">
 </head>
 
-
-
-
 <body>
+<style>
+table, th, td {
+  border:none;
+  vertical-align:top;
+  text-align: left;
+  color:black;
+  font-size:18px;
+  font-family:'Sofia';
+  resize: both;
+  padding-left:15px;
+}
+
+.lineA{
+height:50px;
+}
+
+.text{
+  background-color:white;
+  /*background-image: url(wood1.jpg);*/
+  background-size:contain; 
+  font-family: "Inconsolata", "Handjet";
+  padding-top:20px;
+  width:500px;
+  line-height:1.5;
+  font-size:22px;
+  zoom:190%;
+}
+
+.paper{
+margin: 500px opx opx 50px;
+}
+
+
+.title{
+  font-family:"Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  text-align:left;
+  font-size:14px;
+  margin-left:25px;
+}
+
+.bt{
+  height: 22px;
+  width: 22px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  text-align:center;
+  padding:1px;
+  font-size:15px;
+  color:white;
+  font-weight:bold;
+  font-family: Arial;
+}
+
+.wt{
+  height: 23px;
+  width: 23px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align:center;
+  padding:0px;
+  font-size:15px;
+  border: 1px solid black;
+  color:black;
+ font-weight:bold;
+  font-family: Arial;
+
+}
+
+.place{
+padding-left:30px;
+}
+
+.players{
+padding-top:10px;
+}
+
+</style>
 
 <table style="zoom:50%;">
-<tr>
-<td><div class="grid-container" id='board0' style="visibility:hidden"></div></td>
-<td class='text' id='c0'></td>
-</tr>
-
 
 <tr>
 <td><div class="grid-container" id='board1' style="visibility:hidden"></div></td>
@@ -80,16 +153,16 @@
 </tr>
 
 </table>
-<hr/>
+<hr>
 &copy; 2024 Monteo da Westi
 
-<script src="https://kietpawpan.github.io/artof9x9/artof9x9.js">
-</script>
+<script src="artof9x9.js"></script>
 
 <script>
 
 // Comment for each move.
-var c0= c('BS Go Seigen<br>WS Miyamoto Naoki<div class="players">Place: Japan<br>Date: 1986</div>');
+var cm ="";
+var c0= c('<div class="players">BS Go Seigen<br>WS Miyamoto Naoki</div><div class="place">Place: Japan<br>Date: 1986<br>Komi: 0<br>Result: B+4</div>');
 var c1=c('B1 is the best opening in 9 &times 9 Go.</div>');
 var c2=c('W2 should be a balancing move.');
 var c3=c('B81 should be flexible.');
@@ -111,9 +184,10 @@ var c18=c('');
 var c19=c('');
 var c20=c('');
 
-let comment = [c0,c1,c2];
+let comment = [cm, c0,c1,c2];
 
 // Moves and marks on the board.
+var mm="";
 var m0 = b;
 var m1 = b1ee+b;
 var m2 = b1ee+w2dc+b;
@@ -136,14 +210,14 @@ var m18 = b;
 var m19 = b;
 var m20 = b;
 
-let move =[m0, m1, m2];
+let move =[mm, m0, m1, m2];
 
-for(let m=0;m<move.length;m++){
+for(let m=1;m<move.length;m++){
 document.getElementById('board'+m).innerHTML= move[m];
 document.getElementById('board'+m).style.visibility='visible';
 }
 
-for(let c=0;c<comment.length;c++){
+for(let c=1;c<comment.length;c++){
 document.getElementById('c'+c).innerHTML= comment[c];
 }
 
