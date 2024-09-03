@@ -155,7 +155,7 @@ p {
     border: 2px solid #666;
     color: #666;
     text-align: center;
-    font: 25px Arial, sans-serif;
+    font: 16px Arial, sans-serif;
     font-weight:bold;
 }
 
@@ -169,7 +169,7 @@ p {
     border: 1px solid black;
     color: white;
     text-align: center;
-    font: 25px Arial, sans-serif;
+    font: 16px Arial, sans-serif;
     font-weight:bold;
     /*background-image: radial-gradient(grey, black);*/
 }
