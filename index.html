@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>The Art of 9 &times 9 Go</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handjet">
  <link rel="stylesheet" href="artof9x9.css">
 </head>
 <style>
@@ -22,11 +25,23 @@ td{
 padding-top:60px;
 }
 
-.text{
+.textInfo{
   background-color:white;
   /*background-image: url(wood1.jpg);*/
   background-size:contain; 
   font-family: "Inconsolata", "Handjet";
+  padding-top:50px;
+  width:500px;
+  line-height:1.5;
+  font-size:22px;
+  zoom:190%;
+}
+
+.text{
+  background-color:white;
+  /*background-image: url(wood1.jpg);*/
+  background-size:contain; 
+  /*font-family: "Inconsolata", "Handjet";*/
   padding-top:50px;
   width:500px;
   line-height:1.5;
@@ -88,32 +103,68 @@ padding-top:10px;
 }
 
 .head{
-margin-left:50px;
+margin-left:40px;
 margin-right:10px;
 line-height:1;
+background-color:darkred;
+padding:10px 10px 10px 10px;
 }
 
 .bookTitle{
-font-size:22px;
-font-wight:bold;
-font-family:Arial;
+  color:#ECAD4E;
+  font-family:"Dancing Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size:30px;
+}
+.info{
+color:lightgrey;
+}
+
+.author{
+  font-family:"Dancing Script", cursive;
+ color:#ECAD4E;
+  font-size:20px;
+}
+.copyright{
+margin-left:50px;
+float:bottom;
+}
+
+.bottom-links {
+            background: transparent;
+            position: fixed;
+            inline-size: -webkit-fill-available;
+            bottom: 10px;
+            z-index: 10;
+            text-align: center;
+            font-size: 13px
+        }
+
+img{
+width 480px;
+height:480px;
+padding-left:50px;
 }
 </style>
 
 <body>
 <div class="head">
 <span class="bookTitle">The Art of 9 &times; 9 Go</span><br>
-Black: <b>Go Seigen (9p)</b> &nbsp;&nbsp;White: <b>Miyamoto Naoki (8p)</b> &nbsp;&nbsp;Result: <b>B+4</b>
- 
-<hr>
+<span class="info">How to Beat High Dan Players</span><span class="author"> with Superhuman Analysis</span> 
 </div>
 
 
 <table style="zoom:50%;">
 
 <tr>
+<td><img src="https://kietpawpan.github.io/9x9go/immortals01.jpg"></img></div></td>
+<td class='textInfo' id='c1'></td>
+</tr>
+
+<tr>
 <td><div class="grid-container" id='board1' style="visibility:hidden"></div></td>
-<td class='text' id='c1'></td>
+<td class='textInfo' id='c1'></td>
 </tr>
 
 <tr>
@@ -172,8 +223,10 @@ Black: <b>Go Seigen (9p)</b> &nbsp;&nbsp;White: <b>Miyamoto Naoki (8p)</b> &nbsp
 </tr>
 
 </table>
-<hr/>
-&copy; 2024 Monteo da Westi
+<div class="bottom-links">
+<hr>
+&copy; 2024 Monteo da Westi. All rights reserved.<br>
+</div>
 
 <script src="artof9x9.js">
 </script>
