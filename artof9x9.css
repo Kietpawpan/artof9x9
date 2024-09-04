@@ -1,7 +1,7 @@
 /* 
- * Copyright (c) 2024 Monte Kietpawpan
- * All rights reserved.
- */
+Copyright (c) 2024 Monte Kietpawpan
+All rights reserved.
+*/
 
 a {
   text-decoration: none;
@@ -303,8 +303,8 @@ p {
 
 }
 
-/* If the screen size is 600px wide or less, set the font-size of .b and .w to 16px */
-@media screen and (max-width: 600px) {
+/* If the screen size is 430px wide or less, set the font-size of .b and .w to 16px */
+@media screen and (max-width: 430px) {
   .b {
     font-size: 16px;
   }
