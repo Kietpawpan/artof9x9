@@ -1,7 +1,7 @@
 /* 
-Copyright (c) 2024 Monte Kietpawpan
-All rights reserved.
-*/
+ * Copyright (c) 2024 Monte Kietpawpan
+ * All rights reserved.
+ */
 
 a {
   text-decoration: none;
@@ -155,7 +155,7 @@ p {
     border: 2px solid #666;
     color: #666;
     text-align: center;
-    font: 16px Arial, sans-serif;
+    font: 30px Arial, sans-serif;
     font-weight:bold;
 }
 
@@ -169,7 +169,7 @@ p {
     border: 1px solid black;
     color: white;
     text-align: center;
-    font: 16px Arial, sans-serif;
+    font: 30px Arial, sans-serif;
     font-weight:bold;
     /*background-image: radial-gradient(grey, black);*/
 }
@@ -290,4 +290,25 @@ p {
     text-align: center;
     font: 30px Arial, sans-serif;
     font-weight:bold;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of .b and .w to 30px */
+@media screen and (min-width: 601px) {
+  .b {
+    font-size: 30px;
+  }
+  .w {
+    font-size: 30px;
+  }
+
+}
+
+/* If the screen size is 600px wide or less, set the font-size of .b and .w to 16px */
+@media screen and (max-width: 600px) {
+  .b {
+    font-size: 16px;
+  }
+  .w {
+    font-size: 16px;
+  }
 }
