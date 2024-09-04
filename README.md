@@ -14,7 +14,7 @@ var c1=c('B1 is the best opening, especially when the komi is greater than 7.');
 ```
 let comment = [cm, c0,c1,c2];
 ```
-4. Create a diagram for each move. Each move includes a positive 'b' value. The initial board state has a 'b' value, with non-initial boards set to Monteo Game Format (MGF).
+4. Create a diagram for each move. Each move includes a positive 'b' value. The initial board state is represented using 'b' values, while subsequent moves are expressed in Monteo Go Format (MGF), which consists of MGF move codes plus a 'b' value."
 ```
 var m0 = b;
 var m1 = b1ee+b;
