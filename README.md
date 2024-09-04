@@ -6,7 +6,7 @@ A JavaScript library to generate interactive 9 &times; 9 Go board diagrams and i
 ```
 var c0= c('<div class="players">BS Go Seigen<br>WS Miyamoto Naoki</div><div class="place">Place: Japan<br>Date: 1986<br>Komi: 0<br>Result: B+4</div>');
 ```
-2. Add comments to each move. For example,
+2. Add comments to the comment array, where c1 is the comment associated with move 1.
 ```
 var c1=c('B1 is the best opening, especially when the komi is greater than 7.');
 ```
