@@ -2,7 +2,7 @@
 A JavaScript library to generate interactive 9 &times; 9 Go board diagrams and incorporate annotations.
 
 ## How to Use
-1. Set game information
+1. Set game information.
 ```
 var c0= c('<div class="players">BS Go Seigen<br>WS Miyamoto Naoki</div><div class="place">Place: Japan<br>Date: 1986<br>Komi: 0<br>Result: B+4</div>');
 ```
