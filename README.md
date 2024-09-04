@@ -14,7 +14,7 @@ var c1=c('B1 is the best opening');
 ```
 let comment = [cm, c0,c1,c2];
 ```
-4. Set diagram. Every move includes a positive 'b' value. The blank board is initialized with a 'b' value. 
+4. Create a diagram for each move. Each move includes a positive 'b' value. The initial board state has a 'b' value, with non-initial boards set to MGF.
 ```
 var m0 = b;
 var m1 = b1ee+b;
