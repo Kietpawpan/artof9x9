@@ -10,7 +10,7 @@ var c0= c('<div class="players">BS Go Seigen<br>WS Miyamoto Naoki</div><div clas
 ```
 var c1=c('B1 is the best opening');
 ```
-3. Include comment in the comment array, c0 is game info and c1 is the comment for move 1.
+3. Include comments in the comment array, c0 is game info and c1 is the comment for move 1.
 ```
 let comment = [cm, c0,c1,c2];
 ```
@@ -18,6 +18,10 @@ let comment = [cm, c0,c1,c2];
 ```
 var m0 = b;
 var m1 = b1ee+b;
+```
+5. Include all moves in the move array.
+```
+let move =[mm, m0, m1, m2];
 ```
 ## Examples
 1. [Go Seigen (9p) vs Miyamoto Naoki (8p)](https://kietpawpan.github.io/artof9x9/)
