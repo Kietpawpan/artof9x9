@@ -14,7 +14,7 @@ var c1=c('B1 is the best opening');
 ```
 let comment = [cm, c0,c1,c2];
 ```
-4. Set diagram. Each moves always has +b. The black board is set by = b, which is MGF.
+4. Set diagram. Every move includes a positive 'b' value. The blank board is initialized with a 'b' value. 
 ```
 var m0 = b;
 var m1 = b1ee+b;
