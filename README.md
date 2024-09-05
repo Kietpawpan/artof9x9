@@ -1,5 +1,5 @@
 # artof9x9.js
-A JavaScript library to generate interactive 9 &times; 9 Go board diagrams and incorporate annotations.
+A JavaScript library to generate 9 &times; 9 Go board diagrams and incorporate annotations.
 
 ## How to Use
 1. Specify game details.
