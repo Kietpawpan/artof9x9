@@ -14,10 +14,12 @@ var c1=c('B1 is the best opening, especially when the komi is greater than 7.');
 ```
 let comment = [cm, c0,c1,c2];
 ```
-4. Create a diagram for each move. Each move includes a positive 'b' value. The initial board state is represented using 'b' values, while subsequent moves are expressed in Monteo Go Format (MGF), which consists of MGF move codes plus a 'b' value."
+4. Create a diagram for each move. Each move includes a positive 'b' value. The initial board state is represented using 'b' values, while subsequent moves are expressed in Monteo Go Format (MGF), which consists of MGF move codes plus a 'b' value." The five-star points are represented by pd, pb, pc, pd, and pe, followed by the move code (e.g. b1ee) and the blank board (b).
+
+
 ```
-var m0 = b;
-var m1 = b1ee+b;
+var m0 = pa+pb+pc+pd+pe+ b;
+var m1 = pa+pb+pc+pd+pe+ b1ee+b;
 ```
 5. Append all moves to the move array.
 ```
