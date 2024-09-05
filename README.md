@@ -10,7 +10,7 @@ var c0= c('<div class="players">BS Go Seigen<br>WS Miyamoto Naoki</div><div clas
 ```
 var c1=c('B1 is the best opening, especially when the komi is greater than 7.');
 ```
-3. Include comments in the comment array, c0 is game info and c1 is the comment for move 1.
+3. Append all comments to the comment array, c0 is game info and c1 is the comment for move 1.
 ```
 let comment = [cm, c0,c1,c2];
 ```
