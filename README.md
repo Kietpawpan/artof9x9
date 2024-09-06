@@ -31,7 +31,7 @@ var m1 = p + b1ee+b;
 let move =[mm, m0, m1, m2];
 ```
 ## Examples
-1. [Go Seigen (9p) vs Miyamoto Naoki (8p)](https://kietpawpan.github.io/artof9x9/)
+1. [Go Seigen (9p) vs Miyamoto Naoki (8p)](https://kietpawpan.github.io/artof9x9/GoSeigen.html)
 
 ## Source
 [The Art of 9 &times; 9 Go](https://kietpawpan.github.io/artof9x9/cover.html)
