@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <meta charset="utf-8">
+   <title>The Art of Go</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handjet">
+   <link rel="stylesheet" href="artof9x9.css">
+</head>
+
+<style>
+table, th, td {
+  border:none;
+  vertical-align:top;
+  text-align: left;
+  color:black;
+  font-size:18px;
+  font-family:'Sofia';
+  resize: both;
+  padding-left:15px;
+}
+
+td{
+padding-top:60px;
+}
+
+.textInfo{
+  background-color:white;
+  /*background-image: url(wood1.jpg);*/
+  background-size:contain; 
+  font-family: "Inconsolata", "Handjet";
+  padding-top:50px;
+  width:500px;
+  line-height:1.5;
+  font-size:22px;
+  zoom:190%;
+}
+
+.text{
+  background-color:white;
+  /*background-image: url(wood1.jpg);*/
+  background-size:contain; 
+  /*font-family: "Inconsolata", "Handjet";*/
+  padding-top:50px;
+  width:500px;
+  line-height:1.5;
+  font-size:22px;
+  zoom:190%;
+}
+
+.paper{
+margin: 500px opx opx 50px;
+}
+
+
+.title{
+  font-family:"Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  text-align:left;
+  font-size:14px;
+  margin-left:25px;
+}
+
+.bt{
+  height: 22px;
+  width: 22px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  text-align:center;
+  padding:1px;
+  font-size:15px;
+  color:white;
+  font-weight:bold;
+  font-family: Arial;
+}
+
+.wt{
+  height: 23px;
+  width: 23px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align:center;
+  padding:0px;
+  font-size:15px;
+  border: 1px solid black;
+  color:black;
+ font-weight:bold;
+  font-family: Arial;
+
+}
+
+.place{
+padding-left:30px;
+}
+
+.players{
+padding-top:10px;
+}
+
+.head{
+margin-left:40px;
+margin-right:10px;
+line-height:1;
+background-color:darkred;
+padding:10px 10px 10px 10px;
+}
+
+.bookTitle{
+  color:#ECAD4E;
+  font-family:"Dancing Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size:30px;
+}
+.info{
+color:lightgrey;
+}
+
+.author{
+  font-family:"Dancing Script", cursive;
+ color:#ECAD4E;
+  font-size:20px;
+}
+.copyright{
+margin-left:50px;
+float:bottom;
+}
+
+.bottom-links {
+    /*background: #0070FF;*/
+    line-height: 2;
+    text-align: center;
+    font-size: 16px;
+    /*font-family: sans-serif;*/
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+}
+
+img{
+width 480px;
+height:480px;
+padding-left:50px;
+padding-top:50px;
+
+}
+</style>
+
+<body>
+<div class="head">
+<span class="bookTitle">Superhuamn Go</span><br>
+<span class="info">AI-Powered</span><span class="author"> Game Review</span> 
+</div>
+
+
+<table style="zoom:50%;">
+
+<tr>
+<td><img src="https://kietpawpan.github.io/9x9go/immortals01.jpg"></img></div></td>
+<td class='textInfo' id='cm'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board1' style="visibility:hidden"></div></td>
+<td class='textInfo' id='c1'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board2'style="visibility:hidden"></div></td>
+<td class='text' id='c2'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board3' style="visibility:hidden"></div></td>
+<td class='text' id='c3'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board4' style="visibility:hidden"></div></td>
+<td class='text' id='c4'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board5' style="visibility:hidden"></div></td>
+<td class='text' id='c5'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board6' style="visibility:hidden"></div></td>
+<td class='text' id='c6'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board7' style="visibility:hidden"></div></td>
+<td class='text' id='c7'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board8' style="visibility:hidden"></div></td>
+<td class='text' id='c8'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board9' style="visibility:hidden"></div></td>
+<td class='text' id='c9'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board10' style="visibility:hidden"></div></td>
+<td class='text' id='c10'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board11' style="visibility:hidden"></div></td>
+<td class='text' id='c11'></td>
+</tr>
+
+<tr>
+<td><div class="grid-container" id='board12' style="visibility:hidden"></div></td>
+<td class='text' id='c12'></td>
+</tr>
+
+</table>
+<div class="bottom-links">
+<hr style="margin-bottom:-5px;">&copy; 2024 Monteo da Westi. All rights reserved.</div>
+</div>
+
+<script src="artof9x9.js">
+</script>
+
+<script>
+
+// Comments for move 1 to 81.
+var cm ="Event information";
+
+var c0= c('<div class="players">BS Black Name<br>WS White Name</div><div class="place">Place: Japan<br>Date: 1968<br>Komi: 0<br>Result: B+4</div>');
+
+var c1=c("B1 comment.");
+
+var c2=c("W2 comment.");
+
+var c3=c("B3");
+var c4=c("W4");
+var c5=c("B5");
+var c6=c("W6");
+var c7=c("B7");
+var c8=c("W8");
+var c9=c("B9");
+var c10=c("W10");
+
+var c11=c("B11");
+var c12=c("W12");
+var c13=c("B13");
+var c14=c("W14");
+var c15=c("B15");
+var c16=c("W16");
+var c17=c("B17");
+var c18=c("W18");
+var c19=c("B19");
+
+var c20=c("W20");
+var c21=c("B21");
+var c22=c("W22");
+var c23=c("B23");
+var c24=c("W24");
+var c25=c("B25");
+var c26=c("W26");
+var c27=c("B27");
+var c28=c("W28");
+var c29=c("B29");
+
+var c30=c("W30");
+var c31=c("B31");
+var c32=c("W32");
+var c33=c("B33");
+var c34=c("W34");
+var c35=c("B35");
+var c36=c("W36");
+var c37=c("B37");
+var c38=c("W38");
+var c39=c("B39");
+var c40=c("W40");
+
+var c41=c("B41");
+var c42=c("W42");
+var c43=c("B43");
+var c44=c("W44");
+var c45=c("B45");
+var c46=c("W46");
+var c47=c("B47");
+var c48=c("W48");
+var c49=c("B49");
+var c50=c("W50");
+
+var c51=c("B51");
+var c52=c("W52");
+var c53=c("B53");
+var c54=c("W54");
+var c55=c("B55");
+var c56=c("W56");
+var c57=c("B57");
+var c58=c("W58");
+var c59=c("B59");
+var c60=c("W60");
+
+var c61=c("B61");
+var c62=c("W62");
+var c63=c("B63");
+var c64=c("W64");
+var c65=c("B65");
+var c66=c("W66");
+var c67=c("B67");
+var c68=c("W68");
+var c69=c("B69");
+var c70=c("W70");
+
+var c71=c("B71");
+var c72=c("W71");
+var c73=c("B73");
+var c74=c("W74");
+var c75=c("B75");
+var c76=c("W76");
+var c77=c("B77");
+var c78=c("W78");
+var c79=c("B79");
+var c80=c("W80");
+
+var c81=c("B81");
+
+/*
+cm, c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, 
+c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, 
+c21, c22, c23, c24, c25, c26, c27, c28, c29, c30,
+c31, c32, c33, c34, c35, c36, c37, c38, c39, c40,
+c41, c42, c43, c44, c45, c46, c47, c48, c49, c50,
+c51, c52, c53, c54, c55, c56, c57, c58, c59, c60,
+c61, c62, c63, c64, c65, c66, c67, c68, c69, c70,
+c71, c72, c73, c74, c75, c76, c77, c78, c79, c80,
+c81, 
+*/
+
+let comment = [cm, c0, c1, c2];
+
+// Diagrams 1 to 81.
+var mm="";
+var m0 = p+ b;
+var m1 = p+ b1ee+b;
+var m2 = p+ b1ee+w2cc+Adc+b;
+var m3 = p + b;
+var m4 = p + b;
+var m5 = p + b;
+var m6 = p + b;
+var m7 = p + b;
+var m8 = p + b;
+var m9 = p + b;
+var m10 = p + b;
+var m11 = p + b;
+var m12 = p + b;
+var m13 = p + b;
+var m14 = p + b;
+var m15 = p + b;
+var m16 = p + b;
+var m17 = p + b;
+var m18 = p + b;
+var m19 = p + b;
+var m20 = p + b;
+
+var m20= p + b;
+var m21= p + b;
+var m22= p + b;
+var m23= p + b;
+var m24= p + b;
+var m25= p + b;
+var m26= p + b;
+var m27= p + b;
+var m28= p + b;
+var m29= p + b;
+
+var m30= p + b;
+var m31= p + b;
+var m32= p + b;
+var m33= p + b;
+var m34= p + b;
+var m35= p + b;
+var m36= p + b;
+var m37= p + b;
+var m38= p + b;
+var m39= p + b;
+var m40= p + b;
+
+var m41= p + b;
+var m42= p + b;
+var m43= p + b;
+var m44= p + b;
+var m45= p + b;
+var m46= p + b;
+var m47= p + b;
+var m48= p + b;
+var m49= p + b;
+var m50= p + b;
+
+var m51= p + b;
+var m52= p + b;
+var m53= p + b;
+var m54= p + b;
+var m55= p + b;
+var m56= p + b;
+var m57= p + b;
+var m58= p + b;
+var m59= p + b;
+var m60= p + b;
+
+var m61= p + b;
+var m62= p + b;
+var m63= p + b;
+var m64= p + b;
+var m65= p + b;
+var m66= p + b;
+var m67= p + b;
+var m68= p + b;
+var m69= p + b;
+var m70= p + b;
+
+var m71= p + b;
+var m72= p + b;
+var m73= p + b;
+var m74= p + b;
+var m75= p + b;
+var m76= p + b;
+var m77= p + b;
+var m78= p + b;
+var m79= p + b;
+var m80= p + b;
+
+var m81= p + b;
+
+document.getElementById('cm').innerHTML= cm;
+
+// Moves to display.
+let move =[mm, m0, m1,m2];
+
+
+for(let m=1;m<move.length;m++){
+document.getElementById('board'+m).innerHTML= move[m];
+document.getElementById('board'+m).style.visibility='visible';
+}
+
+for(let c=1;c<comment.length;c++){
+document.getElementById('c'+c).innerHTML= comment[c];
+}
+
+//Turn stone text to stone figure.
+function c(a){
+
+var b81 = a.replaceAll('B81','<span class="bt">81</span>');
+var b79 = b81.replaceAll('B79','<span class="bt">79</span>');
+var b77 = b79.replaceAll('B77','<span class="bt">77</span>');
+var b75 = b77.replaceAll('B75','<span class="bt">75</span>');
+var b73 = b75.replaceAll('B73','<span class="bt">73</span>');
+var b71 = b73.replaceAll('B71','<span class="bt">71</span>');
+var b69 = b71.replaceAll('B69','<span class="bt">69</span>');
+var b67 = b69.replaceAll('B67','<span class="bt">67</span>');
+var b65 = b67.replaceAll('B65','<span class="bt">65</span>');
+var b63 = b65.replaceAll('B63','<span class="bt">63</span>');
+var b61 = b63.replaceAll('B61','<span class="bt">61</span>');
+
+var b59 = b61.replaceAll('B59','<span class="bt">59</span>');
+var b57 = b59.replaceAll('B57','<span class="bt">57</span>');
+var b55 = b57.replaceAll('B55','<span class="bt">55</span>');
+var b53 = b55.replaceAll('B53','<span class="bt">53</span>');
+var b51 = b53.replaceAll('B51','<span class="bt">51</span>');
+var b49 = b51.replaceAll('B49','<span class="bt">49</span>');
+var b47 = b49.replaceAll('B47','<span class="bt">47</span>');
+var b45 = b47.replaceAll('B45','<span class="bt">45</span>');
+var b43 = b45.replaceAll('B43','<span class="bt">43</span>');
+var b41 = b43.replaceAll('B41','<span class="bt">41</span>');
+
+var b39 = b41.replaceAll('B39','<span class="bt">39</span>');
+var b37 = b39.replaceAll('B37','<span class="bt">37</span>');
+var b35 = b37.replaceAll('B35','<span class="bt">35</span>');
+var b33 = b35.replaceAll('B33','<span class="bt">33</span>');
+var b31 = b33.replaceAll('B31','<span class="bt">31</span>');
+var b29 = b31.replaceAll('B29','<span class="bt">29</span>');
+var b27 = b29.replaceAll('B27','<span class="bt">27</span>');
+var b25 = b27.replaceAll('B25','<span class="bt">25</span>');
+var b23 = b25.replaceAll('B23','<span class="bt">23</span>');
+var b21 = b23.replaceAll('B21','<span class="bt">21</span>');
+
+var b19 = b21.replaceAll('B19','<span class="bt">19</span>');
+var b17 = b19.replaceAll('B17','<span class="bt">17</span>');
+var b15 = b17.replaceAll('B15','<span class="bt">15</span>');
+var b13 = b15.replaceAll('B13','<span class="bt">13</span>');
+var b11 = b13.replaceAll('B11','<span class="bt">11</span>');
+var b9 = b11.replaceAll('B9','<span class="bt">9</span>');
+var b7 = b9.replaceAll('B7','<span class="bt">7</span>');
+var b5 = b7.replaceAll('B5','<span class="bt">5</span>');
+var b3 = b5.replaceAll('B3','<span class="bt">3</span>');
+var b1 = b3.replaceAll('B1','<span class="bt">1</span>');
+var b0 = b1.replaceAll('BS','<span class="bt"></span>');
+
+var w80 = b0.replaceAll('W80','<span class="wt">80</span>');
+var w78 = w80.replaceAll('W78','<span class="wt">78</span>');
+var w76 = w78.replaceAll('W76','<span class="wt">76</span>');
+var w74 = w76.replaceAll('W74','<span class="wt">74</span>');
+var w72 = w74.replaceAll('W72','<span class="wt">72</span>');
+var w70 = w72.replaceAll('W70','<span class="wt">70</span>');
+var w68 = w70.replaceAll('W68','<span class="wt">68</span>');
+var w66 = w68.replaceAll('W66','<span class="wt">66</span>');
+var w64 = w66.replaceAll('W64','<span class="wt">64</span>');
+var w62 = w64.replaceAll('W62','<span class="wt">62</span>');
+var w60 = w62.replaceAll('W60','<span class="wt">60</span>');
+
+var w58 = w60.replaceAll('W58','<span class="wt">58</span>');
+var w56 = w58.replaceAll('W56','<span class="wt">56</span>');
+var w54 = w56.replaceAll('W54','<span class="wt">54</span>');
+var w52 = w54.replaceAll('W52','<span class="wt">52</span>');
+var w50 = w52.replaceAll('W50','<span class="wt">50</span>');
+var w48 = w50.replaceAll('W48','<span class="wt">48</span>');
+var w46 = w48.replaceAll('W46','<span class="wt">46</span>');
+var w44 = w46.replaceAll('W44','<span class="wt">44</span>');
+var w42 = w44.replaceAll('W42','<span class="wt">42</span>');
+var w40 = w42.replaceAll('W40','<span class="wt">40</span>');
+
+var w38 = w40.replaceAll('W38','<span class="wt">38</span>');
+var w36 = w38.replaceAll('W36','<span class="wt">36</span>');
+var w34 = w36.replaceAll('W34','<span class="wt">34</span>');
+var w32 = w34.replaceAll('W32','<span class="wt">32</span>');
+var w30 = w32.replaceAll('W30','<span class="wt">30</span>');
+var w28 = w30.replaceAll('W28','<span class="wt">28</span>');
+var w26 = w28.replaceAll('W26','<span class="wt">26</span>');
+var w24 = w26.replaceAll('W24','<span class="wt">24</span>');
+var w22 = w24.replaceAll('W22','<span class="wt">22</span>');
+var w20 = w22.replaceAll('W20','<span class="wt">20</span>');
+
+var w18 = w20.replaceAll('W18','<span class="wt">18</span>');
+var w16 = w18.replaceAll('W16','<span class="wt">16</span>');
+var w14 = w16.replaceAll('W14','<span class="wt">14</span>');
+var w12 = w14.replaceAll('W12','<span class="wt">12</span>');
+var w10 = w12.replaceAll('W10','<span class="wt">10</span>');
+var w8 = w10.replaceAll('W8','<span class="wt">8</span>');
+var w6 = w8.replaceAll('W6','<span class="wt">6</span>');
+var w4 = w6.replaceAll('W4','<span class="wt">4</span>');
+var w2 = w4.replaceAll('W2','<span class="wt">2</span>');
+var w0 = w2.replaceAll('WS','<span class="wt"></span>');
+
+return w0;
+}
+
+</script>
+   
+<audio id="myAudio">
+  <source src="hp.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+​
+
+​
+<script>
+document.getElementById("myAudio").play();
+</script>
+   
+
+
+</body>
+</html>
