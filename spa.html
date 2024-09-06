@@ -87,6 +87,9 @@ margin-top:50px;}
 <tr><td><div id="player2" name="player"></div></td><td name="value"><div id="bestMove2"></div></td><td name="value"><div id="MoveS2"></div></td></tr>
 <tr><td><div id="player3" name="player"></div></td><td name="value"><div id="bestMove3"></div></td><td name="value"><div id="MoveS3"></div></td></tr>
 <tr><td><div id="player4" name="player"></div></td><td name="value"><div id="bestMove4"></div></td><td name="value"><div id="MoveS4"></div></td></tr>
+   <tr><td><div id="player5" name="player"></div></td><td name="value"><div id="bestMove5"></div></td><td name="value"><div id="MoveS5"></div></td></tr>
+   <tr><td><div id="player6" name="player"></div></td><td name="value"><div id="bestMove6"></div></td><td name="value"><div id="MoveS6"></div></td></tr>
+   <tr><td><div id="player7" name="player"></div></td><td name="value"><div id="bestMove7"></div></td><td name="value"><div id="MoveS7"></div></td></tr>
 </table>
 
 <div class="remark">
@@ -144,15 +147,15 @@ var bm6 = [0,1,0,1];//Cho Hunyun
 var bm7=[0,0,0,0];
 
 
-
-
-var ms1 = [-20, -30, -15];
-var ms2 = [-20, -30, -40];
+var ms1 = [0, 0.1-0.7,0,0.1-0.4,0,0.4-0.6,0,0.3-0.5,0.5-4.6,2.9-8.7,0,0,0];
+var ms2 = [99.6-99.7,97.8-99.7,99.6-99.9,0,0,99.5-99.7,99.6-99.8,98.9-96.8,94.8-98.1];
 var ms3 = [20, 30, 60];
 var ms4 = [-20, 30, 40];
 var ms5 = [20, 30, 60];
 var ms6 = [-20, 30, 40];
-   var ms7 = [-20, 30, 40];
+var ms7 = [-20, 30, 40];
+
+
 
 
 var player = [p1, p2, p3, p4, p5, p6,p7];
@@ -212,7 +215,7 @@ bestMove = [bestMove1, bestMove2, bestMove3, bestMove4, bestMove5, bestMove6];
 moveSt = [moveS1, moveS2, moveS3, moveS4, moveS5, moveS6];
 
 for(let p=0;p<player.length;p++){
-document.getElementById("bestMove"+p).innerHTML = bestMove[p];
+document.getElementById("bestMove"+p).innerHTML = bestMove[p].toFixed(1);
 document.getElementById("player"+p).innerHTML = player[p];
 document.getElementById("MoveS"+p).innerHTML = moveSt[p].toFixed(1);
 }
