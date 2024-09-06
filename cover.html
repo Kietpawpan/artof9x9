@@ -69,14 +69,14 @@ img {
 }
 
 /* If the screen size is 430px wide or more, set the font-size of .b and .w to 30px */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 620px) {
   .cover {
-  width:500px;
+  width:620px;
   }
  }
 
 /* If the screen size is 430px wide or less, set the font-size of .b and .w to 16px */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 620px) {
  .cover{
  width:100%;}
 }
@@ -85,6 +85,9 @@ img {
 background-color:darkred;
 }
 
+.cover:hover {
+  background-image: linear-gradient(to bottom right, red, darkred);
+}
 .authors{
 margin-top:100px;
 margin-bottom:20px;
@@ -94,25 +97,25 @@ font-size: 25px;
 }
 </style>
 
-<body onclick="openBook()">
-<div class="cover">
+<body>
+<div class="cover" onclick="openBook()">
 <div class="head" style="text-align:center;">
-<div class="bookTitle">The Art of 9 &times; 9 Go</div><br>
+<div class="bookTitle">Superhuman Go</div><br>
 
 
-<span class="info">Superhuman Review</span><span class="author"></span> 
+<span class="info">AI-Powered Game Analysis</span><span class="author"></span> 
 </div>
 
 <img src="https://kietpawpan.github.io/9x9go/immortals01.jpg"></img>
 
 
-<div class="authors">Monteo da Westi<br/>A Master of Go (9 Dan)<br/>Gemini
+<div class="authors">Monteo da Westi &<br/>A Master of Go (9 Dan)<br/>Westgate Go Academy
 <br><br>
 </div>
 
 <script>
 function openBook(){
- window.open("table.html");
+  location.href = "table.html";
 }
 </script>
 </body>
