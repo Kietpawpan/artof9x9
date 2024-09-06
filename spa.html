@@ -1,0 +1,156 @@
+<html>
+<body>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 620px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.details{
+blackground-color:white;
+}
+</style>
+
+
+<table>
+<tr><th name="player">Players</th><th>Best Move Agreement (%)*</th><th>Move Strength (%)*</th></tr>
+<tr><td><div id="player0" name="player"></div></td><td name="value"><div id="bestMove0"></div></td><td name="value"><div id="MoveS0"></div></td></tr>
+<tr><td><div id="player1" name="player"></div></td><td name="value"><div id="bestMove1"></div></td><td name="value"><div id="MoveS1"></div></td></tr>
+<tr><td><div id="player2" name="player"></div></td><td name="value"><div id="bestMove2"></div></td><td name="value"><div id="MoveS2"></div></td></tr>
+<tr><td><div id="player3" name="player"></div></td><td name="value"><div id="bestMove3"></div></td><td name="value"><div id="MoveS3"></div></td></tr>
+<tr><td><div id="player4" name="player"></div></td><td name="value"><div id="bestMove4"></div></td><td name="value"><div id="MoveS4"></div></td></tr>
+</table>
+*Analyzed with A Master of Go (Superhuman AI)
+
+<br><br>
+<table class="details">
+<tr><td>
+<b>Best Move Agreement</b> is a metric that quantifies the level of alignment between a player's chosen move in a 9 &times; 9 Go game and the move deemed best by A Master of Go (Superhuman AI). It's expressed as a percentage, where:</tr>
+<br>
+<tr><td>
+<ul>
+<li>100%: Perfect agreement. The player's move is identical to the master's.
+<li> 0%: No agreement. The player's move is completely different from the master's.
+</ul>
+
+</td></tr>
+
+<tr><td>
+<b>Move Strength</b> is the impact of each move on the opponent's winning probability.</tr>
+<tr><td>
+<ul>
+<li>A higher Move Strength indicates that a player's moves, on average, improve their chances of winning and decrease their opponent's chances. 
+</ul>
+
+</td></tr>
+</table>
+
+
+<script>
+
+var p1 = "Go Seigen";
+var p2 = "Cho Chikun";
+var p3 = "Takemiya Masaki";
+var p4 = "Ma Xiochun";
+var p5 = "Yuki Satoshi";
+var p6 = "Cho Hunyun";
+
+
+
+
+
+var bm1 = [1,1,1,1, 1,0,0,1];//Go Seigen
+var bm2 = [0,1,0,1];//Cho Chikun
+var bm3 = [0,1,0,1];//Takemiya Masaki
+var bm4 = [0,1,0,1];//Ma Xiochun
+var bm5 = [0,1,0,1];//Yuki Satoshi
+var bm6 = [0,1,0,1];//Cho Hunyun
+
+
+
+
+var ms1 = [20, 30, 60];
+var ms2 = [-20, 30, 40];
+var ms3 = [20, 30, 60];
+var ms4 = [-20, 30, 40];
+var ms5 = [20, 30, 60];
+var ms6 = [-20, 30, 40];
+
+
+var player = [p1, p2, p3, p4, p5, p6];
+
+let bestMove1 = 0;
+for (let i = 0; i < bm1.length; i++) {
+  bestMove1 += bm1[i]/bm1.length*100;}
+
+let bestMove2 = 0;
+for (let j = 0; j < bm2.length; j++) {
+  bestMove2 += bm2[j]/bm2.length*100;}
+
+let bestMove3 = 0;
+for (let k = 0; k < bm3.length; k++) {
+  bestMove3 += bm3[k]/bm3.length*100;}
+
+let bestMove4 = 0;
+for (let l = 0; l < bm4.length; l++) {
+  bestMove4 += bm4[l]/bm4.length*100;}
+
+let bestMove5 = 0;
+for (let o = 0; o < bm5.length; o++) {
+  bestMove5 += bm5[o]/bm5.length*100;}
+
+let bestMove6 = 0;
+for (let q = 0; q < bm6.length; q++) {
+  bestMove6 += bm6[q]/bm6.length*100;}
+
+
+let moveS1 = 0;
+for (let s = 0; s < ms1.length; s++) {
+  moveS1 += ms1[s]/ms1.length;}
+
+let moveS2 = 0;
+for (let t = 0; t < ms2.length; t++) {
+  moveS2 += ms2[t]/ms2.length;}
+
+let moveS3 = 0;
+for (let r = 0; r < ms3.length; r++) {
+  moveS3 += ms3[r]/ms3.length;}
+
+let moveS4 = 0;
+for (let w = 0; w < ms4.length; w++) {
+  moveS4 += ms4[w]/ms4.length;}
+
+let moveS5 = 0;
+for (let u = 0; u < ms5.length; u++) {
+  moveS5 += ms5[u]/ms5.length;}
+
+let moveS6 = 0;
+for (let v = 0; v < ms6.length; v++) {
+  moveS6 += ms6[v]/ms6.length;}
+
+
+bestMove = [bestMove1, bestMove2, bestMove3, bestMove4, bestMove5, bestMove6];
+
+moveSt = [moveS1, moveS2, moveS3, moveS4, moveS5, moveS6];
+
+for(let p=0;p<player.length;p++){
+document.getElementById("bestMove"+p).innerHTML = bestMove[p];
+document.getElementById("player"+p).innerHTML = player[p];
+document.getElementById("MoveS"+p).innerHTML = moveSt[p].toFixed(1);
+}
+
+
+</script>
+</body>
+</html>
