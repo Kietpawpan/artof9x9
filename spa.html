@@ -1,16 +1,27 @@
 <html>
+<head>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handjet">
+</head>
+<title>SPA</title>
 <body>
 <style>
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 620px;
+  margin-left:50px;
+  background-color: #ffffff; 
+  filter: alpha(opacity=40); 
+  opacity: 0.95;
 }
 
 td, th {
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+color:#0e0e0d;
+
 }
 
 tr:nth-child(even) {
@@ -20,8 +31,54 @@ tr:nth-child(even) {
 .details{
 blackground-color:white;
 }
+.subTitle{
+margin-top:-20px;
+  margin-left:50px;
+  font-size:18px;
+ text-align:right;
+  margin-right:50px;
+
+}
+
+.text{
+  width: 620px;
+  margin-top:50px;
+  margin-left:50px;
+  font-size:18px;
+  line-height:25px;
+}
+
+h1{
+  margin-left:50px;
+  text-align:right;
+  margin-right:50px;
+}
+
+.remark{
+  margin-left:50px;
+  font-face:italic;
+}
+.paper{
+  border: 2px grey solid;
+  width:700px;
+  padding:50px 10px; 50px 100px;
+  background: rgb(18,11,2);
+  background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 2%, rgba(247,246,239,0.016771674490108524) 6%);
+color:#0e0e0d;
+}
+
+.page{
+text-align:center;
+margin-top:50px;}
+
 </style>
 
+<div class="paper">
+<h1>Superhuman Analysis</h1>
+<div class="subTitle">Evaluating the game play qualiy with superhuman AI</div>
+<div class="text">Evaluating game play quality with superhuman AI involves comparing a player's moves to those recommended by an AI system that has achieved a level of performance surpassing human experts. This can provide valuable insights into a player's strengths, weaknesses, and decision-making processes.
+</div>
+<br><br>
 
 <table>
 <tr><th name="player">Players</th><th>Best Move Agreement (%)*</th><th>Move Strength (%)*</th></tr>
@@ -31,7 +88,10 @@ blackground-color:white;
 <tr><td><div id="player3" name="player"></div></td><td name="value"><div id="bestMove3"></div></td><td name="value"><div id="MoveS3"></div></td></tr>
 <tr><td><div id="player4" name="player"></div></td><td name="value"><div id="bestMove4"></div></td><td name="value"><div id="MoveS4"></div></td></tr>
 </table>
-*Analyzed with A Master of Go (Superhuman AI)
+
+<div class="remark">
+*Analyzed with A Master of Go (Superhuman AI)--Assummed data for now
+</div>
 
 <br><br>
 <table class="details">
@@ -47,15 +107,18 @@ blackground-color:white;
 </td></tr>
 
 <tr><td>
-<b>Move Strength</b> is the impact of each move on the opponent's winning probability.</tr>
+<b>Move Strength</b> is the impact of each move on the opponent's winning probability compared to the superhuman AI's recommended move</tr>
 <tr><td>
 <ul>
-<li>A higher Move Strength indicates that a player's moves, on average, improve their chances of winning and decrease their opponent's chances. 
+<li>A positive Move Strength indicates that a player's moves, on average, improve their chances of winning and decrease their opponent's chances more effectively than the AI. 
 </ul>
 
 </td></tr>
 </table>
 
+<div class="page">-108-</div>
+
+</div>
 
 <script>
 
@@ -80,8 +143,8 @@ var bm6 = [0,1,0,1];//Cho Hunyun
 
 
 
-var ms1 = [20, 30, 60];
-var ms2 = [-20, 30, 40];
+var ms1 = [-20, -30, -15];
+var ms2 = [-20, -30, -40];
 var ms3 = [20, 30, 60];
 var ms4 = [-20, 30, 40];
 var ms5 = [20, 30, 60];
