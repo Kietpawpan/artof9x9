@@ -90,7 +90,8 @@ margin-top:50px;}
 </table>
 
 <div class="remark">
-*Analyzed with A Master of Go (Superhuman AI)--Assummed data for now
+*Analyzed with A Master of Go (Superhuman AI)<br>
+<sup>#</sup>Assummed data for now
 </div>
 
 <br><br>
@@ -123,22 +124,24 @@ margin-top:50px;}
 <script>
 
 var p1 = "Go Seigen";
-var p2 = "Cho Chikun";
-var p3 = "Takemiya Masaki";
-var p4 = "Ma Xiochun";
-var p5 = "Yuki Satoshi";
-var p6 = "Cho Hunyun";
+var p2 = "Miyamoto Naoki";
+var p3 = "Takemiya Masaki<sup>#</sup>";
+var p4 = "Ma Xiochuni<sup>#</sup>";
+var p5 = "Yuki Satoshii<sup>#</sup>";
+var p6 = "Cho Hunyun<sup>#</sup>";
+var p7 = "Cho Chikun<sup>#</sup>";
 
 
 
 
 
-var bm1 = [1,1,1,1, 1,0,0,1];//Go Seigen
-var bm2 = [0,1,0,1];//Cho Chikun
+var bm1 = [1,0,1,0,1,0,1,0,0,0,1,1];//Go Seigen
+var bm2 = [0,0,0,1,1,0,0,0,0,0,0];//Miya
 var bm3 = [0,1,0,1];//Takemiya Masaki
 var bm4 = [0,1,0,1];//Ma Xiochun
 var bm5 = [0,1,0,1];//Yuki Satoshi
 var bm6 = [0,1,0,1];//Cho Hunyun
+var bm7=[0,0,0,0];
 
 
 
@@ -149,9 +152,10 @@ var ms3 = [20, 30, 60];
 var ms4 = [-20, 30, 40];
 var ms5 = [20, 30, 60];
 var ms6 = [-20, 30, 40];
+   var ms7 = [-20, 30, 40];
 
 
-var player = [p1, p2, p3, p4, p5, p6];
+var player = [p1, p2, p3, p4, p5, p6,p7];
 
 let bestMove1 = 0;
 for (let i = 0; i < bm1.length; i++) {
