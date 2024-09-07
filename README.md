@@ -34,4 +34,4 @@ let move =[mm, m0, m1, m2];
 1. [Go Seigen (9p) vs Miyamoto Naoki (8p)](https://kietpawpan.github.io/artof9x9/GoSeigen.html)
 
 ## Source
-[The Art of 9 &times; 9 Go: AI-Powered Game Analysis](https://kietpawpan.github.io/artof9x9/cover.html)
+[A Master of 9 Go: Unraveling the Secrets of 9&times;9 Professional Play](https://kietpawpan.github.io/artof9x9/cover.html)
