@@ -315,7 +315,10 @@ p {
 }
 
 /* tablet */
-@media (min-width: 500px) and (max-width: 1400) {
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
   .b {
     font-size: 16px;
   }
