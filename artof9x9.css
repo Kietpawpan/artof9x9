@@ -304,23 +304,23 @@ p {
 }
 
 /* mobile */
-@media (max-width:800px){
+@media (max-width:500px){
 .b {
-    font-size: 20px;
+    font-size: 16px;
   }
   .w {
-    font-size: 20px;
+    font-size: 16px;
   }
 
 }
 
 /* tablet */
-@media (min-width: 300px) and (max-width: 800px) {
+@media (min-width: 500px) and (max-width: 1200) {
   .b {
-    font-size: 16px;
+    font-size: 20px;
   }
   .w {
-    font-size: 16px;
+    font-size: 20px;
   }
 
 }
