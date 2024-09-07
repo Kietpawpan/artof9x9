@@ -27,17 +27,19 @@ top:0px;
 }
 
 .bookTitle{
-  color:#ECAD4E;
+  color: white; /*#ECAD4E;*/
   font-family:"Dancing Script", cursive;
   font-weight: 700;
   font-style: normal;
   font-size:100px;
   padding-top:50px;
+  padding-left:5px;
 }
 
 .info{
-color:lightgrey;
-font-size:30px;
+color:#ECAD4E;
+font-size:25px;
+font-family:Arial;
 }
 
 .author{
@@ -48,11 +50,12 @@ font-size:30px;
 
 img {
   border-radius: 50%;
-  width:350px;
+  width:400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top:50px;
+  margin-top:100px;
+  border: 5px solid white;
   }
 
 .bottom-links {
@@ -69,20 +72,21 @@ img {
 }
 
 /* If the screen size is 430px wide or more, set the font-size of .b and .w to 30px */
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 700px) {
   .cover {
-  width:620px;
+  width:700px;
   }
  }
 
 /* If the screen size is 430px wide or less, set the font-size of .b and .w to 16px */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 700px) {
  .cover{
  width:100%;}
 }
 
 .cover{
 background-color:darkred;
+height:1000px;
 }
 
 .cover:hover {
@@ -95,21 +99,38 @@ text-align:center;
 color:white;
 font-size: 25px;
 }
+
+.press{
+COLOR:GREY;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+font-family: Arial;
+padding-top:20px;
+padding-bottom:20px;
+border: 5px solid grey;
+width:400px;
+margin-left:150px;
+background-color:white;
+}
 </style>
 
 <body>
 <div class="cover" onclick="openBook()">
 <div class="head" style="text-align:center;">
-<div class="bookTitle">The Art of<br>9&times;9 Go</div><br>
+<div class="bookTitle">A Master of Go</div><br>
 
 
-<span class="info">AI-powered Game Analysis</span><span class="author"></span> 
+<span class="info">Unraveling the Secrets of 9&times;9 Professional Play</span><span class="author"></span> 
 </div>
 
-<img src="https://kietpawpan.github.io/9x9go/immortals01.jpg"></img>
+<img src="9x9.jpg"></img>
 
 
-<div class="authors">by<br>A Master of Go 9-Dan<br/>elicited by Monteo da Westi &<br/>Gemini
+<div class="authors">by<br><span style="font-size:30px;font-weight:bold;font-family:Arial;">A Master of Go 9-dan</span><br/>elicited by Monteo da Westi 
+</div>
+
+<br><br><br>
 <br><br><br>
 </div>
 
