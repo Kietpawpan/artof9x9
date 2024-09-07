@@ -317,10 +317,10 @@ p {
 /* tablet */
 @media (min-width: 500px) and (max-width: 1400) {
   .b {
-    font-size: 20px;
+    font-size: 16px;
   }
   .w {
-    font-size: 20px;
+    font-size: 16px;
   }
 
 }
