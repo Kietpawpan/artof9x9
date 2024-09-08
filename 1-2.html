@@ -35,7 +35,7 @@ padding-top:60px;
   padding-top:50px;
   width:500px;
   line-height:1.5;
-font-size:22px;
+font-size:16px;
   zoom:190%;
 }
 
@@ -47,7 +47,7 @@ font-size:22px;
   padding-top:50px;
   width:500px;
   line-height:1.5;
-  font-size:22px;
+  font-size:17px;
   zoom:190%;
 }
 
@@ -204,6 +204,41 @@ color: #333;
 text-align: center;
 }
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+.b {
+    font-size: 14px;
+  }
+  .w {
+    font-size: 14px;
+  }
+
+}
+
+/* tablet */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .b {
+    font-size: 12px;
+  }
+  .w {
+    font-size: 12px;
+  }
+  .bt {
+    font-size: 9.5px;
+  }
+  .wt {
+    font-size: 9.5px;
+  }
+
+}
+
+}
+
 </style>
     <div class="page" onclick="goback()">
 
@@ -298,7 +333,7 @@ var cm ="";
 var c0= c('<div class="players">BS Go Seigen<br>WS Miyamoto Naoki</div><div class="place">Place: Japan<br>Date: 1968<br>Komi: 0<br>Result: B+4</div>');
 var c1=c('B1 is the best opening, especially when the komi is greater than 7.');
 
-var c2=c("Move W2 demonstrates a territorial approach, avoiding direct conflict with B1. This aligns with Mayamoto Naoki's reputation for a solid and reliable playing style. However, in this situation, a more aggressive knight move, such as playing at A, could potentially disrupt B1's position.");
+var c2=c("W2 avoids direct conflict with B1, for a solid and reliable playing style. However, a more aggressive knight move, such as playing at A, could potentially disrupt B1's position.");
 
 var c3=c("Go Seigen's move at B3 shows how willing he was to take risks. He had to be able to see the whole consequence to make this move.");
 var c4=c('W4');
