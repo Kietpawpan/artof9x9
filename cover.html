@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
 <html>
+<head>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    <meta charset="utf-8">
@@ -8,130 +8,101 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handjet">
-   <link rel="stylesheet" href="artof9x9.css">
-</head>
-<style>
 
-table{
-background-color:darkred;
+
+    <title>Table of Contents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height:1.5;
+        }
+ 
+.page {
+    width: 450px;
+    height:600px;
+    margin-left:0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(90deg, darkred 4%, red 1%);
+color:#0e0e0d;
 }
 
-.head{
-margin-top:0px;
-margin-left:0px;
-margin-right:10px;
-line-height:1;
-padding:0px 10px 10px 10px;
-width: 100%;
-top:0px;
+.page2 {
+   width: 450px;
+    height:600px;
+    margin-left: 486px;
+    margin-top: -641.85px;
+
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(270deg, darkred 20%, red 1%);
 }
+.text{
+padding-left:50px;
+}
+.pn{
+text-align:center;
+font-size:15px;
+margin-top:40px;
+}
+
+
 
 .bookTitle{
   color: white; /*#ECAD4E;*/
-  font-family:"Dancing Script", cursive;
+  /*font-family:"Dancing Script", cursive;*/
   font-weight: 700;
   font-style: normal;
-  font-size:100px;
-  padding-top:50px;
+  font-size:50px;
+  padding-top:30px;
   padding-left:5px;
 }
 
 .info{
-color:#ECAD4E;
-font-size:25px;
+color: yellow;/*#ECAD4E;*/
+font-size:18px;
 font-family:Arial;
+margin-top:-40px;
 }
 
-.author{
-  font-family:"Dancing Script", cursive;
- color:#ECAD4E;
-  font-size:25px;
-}
 
 img {
   border-radius: 50%;
-  width:400px;
+  width:250px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top:100px;
+  margin-top:50px;
   border: 5px solid white;
   }
-
-.bottom-links {
-    /*background: #0070FF;*/
-    line-height: 2;https://github.com/Kietpawpan/artof9x9/edit/main/cover.html
-    text-align: center;
-    font-size: 16px;
-    /*font-family: sans-serif;*/
-    position: fixed;
-    bottom: 15px;
-    width: 100%;
-    color:white;
-    font-weight:bold;
-}
-
-/* If the screen size is 430px wide or more, set the font-size of .b and .w to 30px */
-@media screen and (min-width: 700px) {
-  .cover {
-  width:700px;
-  }
- }
-
-/* If the screen size is 430px wide or less, set the font-size of .b and .w to 16px */
-@media screen and (max-width: 700px) {
- .cover{
- width:100%;}
-}
-
-.cover{
-background-color:darkred;
-height:1000px;
-}
-
 .cover:hover {
   background-image: linear-gradient(to bottom right, red, darkred);
 }
 .authors{
-margin-top:100px;
-margin-bottom:20px;
-text-align:center;
-color:white;
-font-size: 25px;
+  margin-top:50px;
+  margin-bottom:20px;
+  text-align:center;
+  color:black;
+  font-size: 18px;
 }
-
-.press{
-COLOR:GREY;
-text-align:center;
-font-size:22px;
-font-weight:bold;
-font-family: Arial;
-padding-top:20px;
-padding-bottom:20px;
-border: 5px solid grey;
-width:400px;
-margin-left:150px;
-background-color:white;
-}
-</style>
+    </style>
+</head>
 
 <body>
-<div class="cover" onclick="openBook()">
+<div class="page" onclick="openBook()">
 <div class="head" style="text-align:center;">
-<div class="bookTitle">A Master of Go</div><br>
-
+<div class="bookTitle">A Master of Go</div>
 
 <span class="info">Unraveling the Secrets of 9&times;9 Professional Play</span><span class="author"></span> 
 </div>
 
-<img src="9x9.jpg"></img>
+<img src="https://kietpawpan.github.io/artof9x9/9x9.jpg"></img>
 
 
-<div class="authors">by<br><span style="font-size:30px;font-weight:bold;font-family:Arial;">Monteo da Westi</span><br/>powered by A Master of Go 9-dan
+<div class="authors">by<br><span style="font-size:25px;font-weight:bold;font-family:Arial;">Monteo da Westi</span><br/><font color="white">Powered by A Master of Go 9-dan & Gemini</font>
+</div>
 </div>
 
-<br><br><br>
-<br><br><br>
 </div>
 
 <script>
