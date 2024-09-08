@@ -32,6 +32,4 @@ let move =[mm, m0, m1, m2];
 ```
 ## Examples
 1. [Go Seigen (9p) vs Miyamoto Naoki (8p)](https://kietpawpan.github.io/artof9x9/GoSeigen.html)
-
-## Source
-[A Master of 9 Go: Unraveling the Secrets of 9&times;9 Professional Play](https://kietpawpan.github.io/artof9x9/cover.html)
+2. [A Master of 9 Go: Unraveling the Secrets of 9&times;9 Professional Play](https://kietpawpan.github.io/artof9x9/cover.html)
