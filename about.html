@@ -97,12 +97,12 @@ body{
 }
 </style>
 
-<div class="paper">
+<div class="paper" onclick="goback()">
 
 </div>
 
 
-<div class="paper2">
+<div class="paper2" onclick="gonext()">
 <h1>About This Book</h1>
 <div class="text">
 
@@ -132,5 +132,14 @@ This book invites you to join us on a journey of discovery, as we unravel the se
 
 </div>
 
+   <script>
+function goback(){
+  location.href = "copyrightPage.html";
+}
+function gonext(){
+  location.href = "table.html";
+}
+      
+</script>
 </body>
 </html>
