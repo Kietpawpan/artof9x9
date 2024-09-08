@@ -1,145 +1,93 @@
+<!DOCTYPE html>
 <html>
 <head>
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handjet">
+    <title>Book Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<title>About This Book</title>
+
 <body>
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 620px;
-  margin-left:50px;
-  background-color: #ffffff; 
-  filter: alpha(opacity=40); 
-  opacity: 0.95;
+body {
+    font-family: serif;
+    font-size: 12pt;
+    color: #333;
 }
 
-td, th {
-  text-align: left;
-  padding: 8px;
+.page {
+    width: 450px;
+    height:600px;
+    margin-left:0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(270deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.8%, rgba(247,246,239,0.016771674490108524) 4%);
 color:#0e0e0d;
-
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.page2 {
+   width: 450px;
+    height:600px;
+    margin-left: 486px;
+    margin-top: -641.85px;
+
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
+color:#0e0e0d;
 }
 
-.details{
-blackground-color:white;
-}
-.subTitle{
-margin-top:-20px;
-  margin-left:50px;
-  font-size:18px;
- text-align:right;
-  margin-right:50px;
 
+.content {
+    text-align: left;
+    line-height: 1.4;
+    padding-left:10px;
 }
-
-.text{
-  width: 620px;
-  margin-top:50px;
-  margin-left:50px;
-  font-size:18px;
-  line-height:25px;
-}
-
 h1{
-  margin-left:50px;
-  text-align:right;
-  margin-right:50px;
-}
-
-.remark{
-  margin-left:50px;
-  font-face:italic;
-}
-.paper{
-  border: 2px grey solid;
-  width:700px;
-  padding:50px 10px; 50px 100px;
-  background: rgb(18,11,2);
-  background: linear-gradient(270deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
-color:#0e0e0d;
- height:1000px;
-}
-
-.paper2{
-  margin-left:717.5px;
-  margin-top:-1103.8px;
-  border: 2px grey solid;
-  width:700px;
-  padding:50px 10px; 50px 100px;
-  background: rgb(18,11,2);
-  background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 3%);
-color:#0e0e0d;
- height:1000px;
-}
-
-.page{
-text-align:center;
-  left: 0;
-  margin-top:50px;
-  width: 700px;
-}
-
-.writer{
 text-align:right;
-padding-right:50px;
-padding-top:50px;
 }
-body{
-   blackground-color:darkred;
+
+.pn{
+text-align:center;
 }
 </style>
+    <div class="page" onclick="goback()">
 
-<div class="paper" onclick="goback()">
-
-</div>
+    </div>
 
 
-<div class="paper2" onclick="gonext()">
+  <div class="page2" onclick="gonext()">
+        <div class="content">
+         
 <h1>About This Book</h1>
 <div class="text">
 
-Artificial intelligence has dramatically changed the world of 9×9 Go. AI systems are now better than even the best human players. These incredibly powerful AI agents, with their deep understanding of Go, have revolutionized how we study and enjoy the game.<p>
-
-This book offers a close look at professional 9×9 Go through the eyes of A Master of Go, a superhuman AI. This AI, using a neural network that's much stronger than the one used by KataTest 9-dan&mdash; the first invincible No. 1 top ranked player on the GoQuest's 9×9 Go server, gives us amazing insights into the game's complexities.</p>
 <p>
-By studying the strategies, tactics, and decisions of top-level players, we can get a better understanding of high-level competition. Our AI analysis will dive deep into each game, finding strengths, weaknesses, and missed opportunities that humans might not see.</p>
+This book offers a close look at professional 9×9 Go through the eyes of A Master of Go, a superhuman AI that uses KataGo engine with the latest neural network, arguably stronger than KataTest 9-dan. The study gives me amazing insights into the game's complexities.</p>
+<p>
+Our analysis will dive deep into each game, finding strengths, weaknesses, and missed opportunities that humans might not see.</p>
 <p>
 Through this exploration, we aim to:
 </p>
 <ul>
+<li>Reveal subtle 9&times;9 tactics and strategic concepts that may have been overlooked by human players.</li>
 <li>
-<b>Uncover hidden patterns and strategies:</b> AI can reveal subtle 9&times;9 tactics and strategic concepts that may have been overlooked by human players. For example, AI might identify unexpected connections between distant groups, or uncover novel ways to leverage specific board configurations.
-</li>
-<li>
-<b>Gain a deeper appreciation for human ingenuity:</b> Professional Go players exhibited remarkable skill and creativity. By understanding the insights provided by a superhuman AI, we can gain a deeper appreciation for the strategic brilliance and resilience of top-level 9&times;9 players before the superhuman Go AI era.</li></ul>
+Gain a deeper appreciation for the strategic brilliance and resilience of top-level 9&times;9 players before the superhuman Go AI era.</li></ul>
+
 <p>
 This book invites you to join us on a journey of discovery, as we unravel the secrets of high-level 9&times;9 Go games.</p>
+<p align="right">Monteo da Westi<br>powered by A Master of Go 9-dan &<br>Gemini</p>
 </div>
-<div class="writer">Monteo da Westi<br>WGA</div>
-<br>
-
-
-<div class="page">- i -</div>
-
-
+<p>
+<div class="pn">- i -</div>
 </div>
-
-   <script>
+</p>
+<script>
 function goback(){
-  location.href = "copyrightPage.html";
+  location.href = "icover.html";
 }
 function gonext(){
   location.href = "table.html";
 }
-      
 </script>
+
 </body>
 </html>
