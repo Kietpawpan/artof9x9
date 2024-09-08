@@ -1,309 +1,142 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-   <meta charset="utf-8">
-   <title>The Art of 9 &times 9 Go</title>
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Handjet">
-
-</head>
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Literata");
-
-* {
-    font-family: "Literata";
+    <title>Table of Contents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height:1.5;
+        }
+ 
+.page {
+    width: 450px;
+    height:600px;
+    margin-left:0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(270deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.8%, rgba(247,246,239,0.016771674490108524) 4%);
+color:#0e0e0d;
 }
 
+.page2 {
+   width: 450px;
+    height:600px;
+    margin-left: 486px;
+    margin-top: -641.85px;
 
-.toc-list, .toc-list ol {
-  list-style-type: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
+color:#0e0e0d;
+}
+.text{
+padding-left:50px;
+}
+.pn{
+text-align:center;
+font-size:15px;
+margin-top:40px;
 }
 
-.toc-list {
-  padding: 0;
-  margin-left:10px;
-  margin-right:10px;
-
+ul
+{
+    list-style: none;
+    padding: 0;
+    overflow-x: hidden;
 }
-
-
-.toc-list ol {
-  padding-inline-start: 2ch;
+.outer {
+    width: 95%;  
 }
-
-.toc-list li > a {
-    text-decoration: none;
-    display: grid;
-    grid-template-columns: auto max-content;
-    align-items: end;
+.inner
+{
+    padding-left: 20px;
 }
-
-.toc-list li > a > .page {
-    text-align: right;
-}
-
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    width: 1px;
+li:not(.nested):before {
+    float: left;
+    width: 0;
     white-space: nowrap;
+    content:". . . . . . . . . . . . . . . . . . . . "". . . . . . . . . . . . . . . . . . . . "". . . . . . . . . . . . . . . . . . . . "". . . . . . . . . . . . . . . . . . . . "
+}
+li a:first-child {
+    padding-right: 0.33em;
+    background: white;
+    text-decoration:none;
+    color:black;
+}
+a + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white;
 }
 
-.toc-list li > a > .title {
-    position: relative;
-    overflow: hidden;
-}
-
-.toc-list li > a .leaders::after {
-    position: absolute;
-    padding-inline-start: .25ch;
-    content: " . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . . . . "
-        ". . . . . . . . . . . . . . . . . . . . . . . ";
-    text-align: right;
-}
-
-.head{
-margin-left:0px;
-margin-right:10px;
-line-height:1;
-background-color:darkred;
-padding:0px 10px 10px 10px;
-width: 100%;
-top:0px;
-}
-
-.bookTitle{
-  color:#ECAD4E;
-  font-family:"Dancing Script", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size:30px;
-}
-
-.info{
-color:lightgrey;
-}
-
-.author{
-  font-family:"Dancing Script", cursive;
- color:#ECAD4E;
-  font-size:20px;
+li a:hover{
+    background-color:yellow;
 }
 
 
-@media screen and (min-width: 700px) {
-  .toc-list{
-  width:620px;
-  margin-left:10px;
-  margin-right:10px;
-
-  }
-  .head{
-  width:620px; 
-  margin-left:10px;
-  margin-right:10px;
-
- }
-}
-If the screen size is 430px wide or less, set the font-size of .b and .w to 16px 
-@media screen and (max-width: 700px) {
- .toc-list{
- width:100%;
-  margin-left:10px;
-  margin-right:10px;
-
-}
- .head{
- width:100%;
-  margin-left:10px;
-  margin-right:10px;
-
-}
-}
-
-
-
-</style>
+    </style>
+</head>
 
 <body>
-<div class="head" style="text-align:center;">
-<span class="bookTitle">Table of Contents</span><br>
-</div>
+<div class="page"></div>
+<div class="page2">
+<div class="text">
+    <h1>Table of Contents</h1>
 
 
-<!-- role=list necessary because WebKit removes list semantic when list-style-type: none -->
-<ol class="toc-list" role="list">
 
-
-    <li>
-        <a href="#Introduction">
-            <span class="title"><b>Introduction</b><span class="leaders" aria-hidden="true"></span></span> <span
-                data-href="#Introduction" class="page"><span class="visually-hidden">Page&nbsp;</span>5</span>
-        </a>
-        <ol role="list">
-
-            <li>
-                <a href="about.html">
-                    <span class="title">About This Book<span class="leaders" aria-hidden="true"></span></span> <span
-                        data-href="#Introduction-About-This-Book" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>5</span>
-                </a>
+<ul class="outer">
+    <li><a href="#"><b>Part I Advanced Principles of 9&times;9 Go</a></b><span><b>1</b></span></li>
+    <li class="nested">
+        <ul class="inner">
+            <li><a href="#">Don't be greedy</a><span>2</span>
             </li>
-
-            <li>
-                <a href="#Introduction-Acknowledgments">
-                    <span class="title">Acknowledgments<span class="leaders" aria-hidden="true"></span></span> <span
-                        data-href="#Introduction-Acknowledgments" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>8</span>
-                </a>
+            <li><a href="#">Be merciful</a><span>3</span>
             </li>
-
-            <li>
-                <a href="#Introduction-About-the-Author">
-                    <span class="title">About the Author<span class="leaders" aria-hidden="true"></span></span> <span
-                        data-href="#Introduction-About-the-Author" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>8</span>
-                </a>
+ 	   <li><a href="#">Have strategies</a><span>4</span>
             </li>
-
-            <li>
-                <a href="#Introduction-Disclaimer">
-                    <span class="title">Disclaimer<span class="leaders" aria-hidden="true"></span></span> <span
-                        data-href="#Introduction-Disclaimer" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>8</span>
-                </a>
+ 	   <li><a href="#">Know tactics</a><span>5</span>
             </li>
-
-        </ol>
+        </ul>
     </li>
-    <li>
-        <a href="#Promise-Basics">
-            <span class="title"><b>1. Komi Deciding Match</b>
-<span class="leaders" aria-hidden="true"></span></span>
-            <span data-href="#Promise-Basics" class="page"><span class="visually-hidden">Page&nbsp;</span>9</span>
-        </a>
-        <ol role="list">
 
-            <li>
-                <a href="GoSeigen.html">
-                    <span class="title">Go Seigen (9p)<span class="leaders" aria-hidden="true"></span></span>
-                    <span data-href="#Promise-Basics-The-Promise-Lifecycle" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>17</span>
-                </a>
+    <li><a href="#"><b>Part II Professional Plays</b></a><span><b>6</b></span></li>
+    <li class="nested">
+        <ul class="inner">
+            <li><a href="GoSeigen.html">Go Seigen 9p</a><span>7</span>
             </li>
-
-            <li>
-                <a href="#Promise-Basics-Creating-New-Unsettled-Promises">
-                    <span class="title">Mayamoto Naoki (8p)<span class="leaders"
-                            aria-hidden="true"></span></span> <span
-                        data-href="#Promise-Basics-Creating-New-Unsettled-Promises" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>21</span>
-                </a>
+            <li><a href="#">Miyamoto Naoki 8p</a><span>17</span>
             </li>
-
-     
-           
-        </ol>
+ 	    <li><a href="#">Cho Chikun 9p</a><span>27</span>
+            </li>
+ 	    <li><a href="#">Cho Hunhyun 9p</a><span>37</span>
+            </li>
+ 	    <li><a href="#">Takemiya Masaki 9p</a><span>45</span>
+            </li>
+ 	    <li><a href="#">Ma Xioachun 9p</a><span>58</span>
+            </li>
+ 	    <li><a href="#">Yuki Satoshi 9p</a><span>67</span>
+            </li>
+ 	    <li><a href="#">Shin Jin-seo 9p</a><span>98</span>
+            </li>
+ 	    <li><a href="#">Linbee 9d</a><span>110</span>
+            </li>
+        </ul>
     </li>
-    <li>
-        <a href="#Chaining-Promises">
-            <span class="title"><b>2. MiniGo Matches</b><span class="leaders" aria-hidden="true"></span></span>
-            <span data-href="#Chaining-Promises" class="page"><span class="visually-hidden">Page&nbsp;</span>28</span>
-        </a>
-        <ol role="list">
 
-            <li>
-                <a href="#Chaining-Promises-Catching-Errors">
-                    <span class="title">Cho Chikun (9p)<span class="leaders" aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Catching-Errors" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>30</span>
-                </a>
+   <li><a href="#"><b>Part III Superhuman Plays</b></a><span><b>121</b></span></li>
+    <li class="nested">
+        <ul class="inner">
+            <li><a href="#">KataTest 9d</a><span>122</span>
             </li>
-
-            <li>
-                <a href="#Chaining-Promises-Using-finally-in-Promise-Chains">
-                    <span class="title">Yuki Satochi (9p)<span class="leaders"
-                            aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Using-finally-in-Promise-Chains" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>34</span>
-                </a>
+            <li><a href="#">A Master of Go 9p</a><span>132</span>
             </li>
-
-            <li>
-                <a href="#Chaining-Promises-Returning-Values-in-Promise-Chains">
-                    <span class="title">Cho Hunhyun (9p)<span class="leaders"
-                            aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Returning-Values-in-Promise-Chains" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>35</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#Chaining-Promises-Returning-Promises-in-Promise-Chains">
-                    <span class="title">Takemiya Mazaki (9p)<span class="leaders"
-                            aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Returning-Promises-in-Promise-Chains" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>42</span>
-                </a>
-            </li>
-
-           
-        </ol>
-    </li>
- 
-   <li>
-        <a href="#Chaining-Promises">
-            <span class="title"><b>3. GoQuest</b><span class="leaders" aria-hidden="true"></span></span>
-            <span data-href="#Chaining-Promises" class="page"><span class="visually-hidden">Page&nbsp;</span>50</span>
-        </a>
-        <ol role="list">
-
-            <li>
-                <a href="#Chaining-Promises-Catching-Errors">
-                    <span class="title">Linbee (9D)<span class="leaders" aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Catching-Errors" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>60</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#Chaining-Promises-Using-finally-in-Promise-Chains">
-                    <span class="title">spaceman (9D)<span class="leaders"
-                            aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Using-finally-in-Promise-Chains" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>70</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#Chaining-Promises-Returning-Values-in-Promise-Chains">
-                    <span class="title">A Master of Go (9D)<span class="leaders"
-                            aria-hidden="true"></span></span> <span
-                        data-href="#Chaining-Promises-Returning-Values-in-Promise-Chains" class="page"><span
-                            class="visually-hidden">Page&nbsp;</span>80</span>
-                </a>
-            </li>
-
-          
-           
-        </ol>
-    </li>
- 
+        </ul>
+   <li><a href="#"><b>About the Author</b></a><span><b>141</b></span></li>
   
-
-      </ol>
-    </li>
-</ol>
+</ul>
+</div>
+<div class="pn">- iii -</div>
+</div>
 </body>
 </html>
