@@ -1,100 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Book Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<title>Inner Cover</title>
+
 <body>
 <style>
-.details{
-blackground-color:white;
-}
-.subTitle{
-margin-top:-15px;
-  font-size:25px;
- text-align:center;
-
-}
-
-.text{
-  width: 620px;
-  margin-top:50px;
-  margin-left:50px;
-  font-size:18px;
-  line-height:25px;
-}
-
-
-.remark{
-  margin-left:50px;
-  font-face:italic;
-}
-.paper{
-  border: 2px grey solid;
-  width:700px;
-  padding-top:50px;
-  padding-bottom:20px;
-  background: rgb(18,11,2);
-  background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
-color:#0e0e0d;
- height:1000px;
-}
-
-.page{
-text-align:center;
-  left: 0;
-  margin-top:50px;
-  width: 700px;
-}
-
-.writer{
-text-align:right;
-padding-right:50px;
-padding-top:50px;
-}
-  body {
+body {
     font-family: serif;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 36px;
+    font-size: 12pt;
     color: #333;
 }
 
-p {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #666;
+.page {
+    width: 450px;
+    height:600px;
+    margin-left:0px;
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(270deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.8%, rgba(247,246,239,0.016771674490108524) 4%);
+color:#0e0e0d;
 }
 
-.author{
-  margin-top:370px;
+.page2 {
+   width: 450px;
+    height:600px;
+    margin-left: 486px;
+    margin-top: -641.85px;
+
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
+color:#0e0e0d;
+}
+
+
+.content {
+    text-align: center;
+    line-height: 1.4;
+}
+
+.title{
+margin-top:250px;
+}
+
+.bName{
+margin-top:30px;
 }
 .press{
-  margin-top:370px;
+margin-top:200px;
 }
+
+
+
 </style>
+    <div class="page" onclick="goback()">
 
-<div class="paper" onclick="openBook()">
-  
-<h1>A Master of Go</h1>
-  <div class='subTitle'>Unraveling the Secrets of 9×9 Professional Play</div>
+    </div>
 
-<p class="author">by Monteo da Westi</p>
-<p>powered by A Master of Go 9-dan</p>
 
-<p class="press">THE WESTGATE PRESS</p>
-<p>Asia Pacific</p>
-</div>
+  <div class="page2" onclick="gonext()">
+        <div class="content">
+           <div class="bName">A MASTER OF GO:<br>Unraveling the Secrets of 9×9 Professional Play
+	   </div>
+
+
+           <div class="title">by Monteo da Westi<br>Powered by A Master of Go 9-dan</div>
+        
+           <div class="press">THE WESTGATE PRESS<br>Asia-Pacific</div>
+
+        </div>
+    </div>
+
 <script>
-function openBook(){
+function goback(){
+  location.href = "cover.html";
+}
+function gonext(){
   location.href = "copyrightPage.html";
 }
 </script>
-
 
 </body>
 </html>
