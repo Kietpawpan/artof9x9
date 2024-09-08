@@ -14,20 +14,37 @@ body {
 }
 
 .page {
-    width: 500px;
-    margin: 20px auto;
+    width: 450px;
+    height:600px;
+    margin-left:0px;
     padding: 20px;
     border: 1px solid #ccc;
- background: linear-gradient(270deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
+ background: linear-gradient(270deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.8%, rgba(247,246,239,0.016771674490108524) 4%);
 color:#0e0e0d;
 }
+
+.page2 {
+   width: 450px;
+    height:600px;
+    margin-left: 488px;
+    margin-top: -641.85px;
+
+    padding: 20px;
+    border: 1px solid #ccc;
+ background: linear-gradient(90deg, rgba(18,11,2,1) 0%, rgba(31,30,30,0.3697128509606967) 0.5%, rgba(247,246,239,0.016771674490108524) 4%);
+color:#0e0e0d;
+}
+
 
 .content {
     text-align: center;
     line-height: 1.4;
 }
+.title{
+margin-top:250px;
+}
 </style>
-    <div class="page">
+    <div class="page" onclick="goback()">
         <div class="content">
             <p>Published by<br>Monteo da Westi<br>
             Asia-Pacific
@@ -50,5 +67,21 @@ color:#0e0e0d;
 
         </div>
     </div>
+
+
+  <div class="page2" onclick="gonext()">
+        <div class="content">
+           <div class="title">A MASTER OF GO</div>
+        </div>
+    </div>
+
+<script>
+function goback(){
+  location.href = "cover.html";
+}
+function gonext(){
+  location.href = "about.html";
+}
+
 </body>
 </html>
